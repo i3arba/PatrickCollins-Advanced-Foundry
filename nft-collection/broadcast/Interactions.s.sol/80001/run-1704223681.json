@@ -1,0 +1,36 @@
+{
+  "transactions": [
+    {
+      "hash": "0x0c1304d5ce8a9b4285b1f3cff04df841a85c885d77a3ff78e22657b237515311",
+      "transactionType": "CALL",
+      "contractName": "BasicNFT",
+      "contractAddress": "0x38683d894741451A71Ef0A6Ef9d68Fd36db91385",
+      "function": "mintNft(string)",
+      "arguments": [
+        "\"ipfs://QmPh5YY9cEdVbGEUNCwqhRBXHQ2MGJdLCdGN5jcQLDLJMQ?filename=0-st-bernard.json\""
+      ],
+      "transaction": {
+        "type": "0x02",
+        "from": "0x5fa769922a6428758fb44453815e2c436c57c3c7",
+        "to": "0x38683d894741451a71ef0a6ef9d68fd36db91385",
+        "gas": "0x40f6f",
+        "value": "0x0",
+        "data": "0xda86f4a900000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000050697066733a2f2f516d50683559593963456456624745554e437771685242584851324d474a644c4364474e356a63514c444c4a4d513f66696c656e616d653d302d73742d6265726e6172642e6a736f6e00000000000000000000000000000000",
+        "nonce": "0xb6a",
+        "accessList": []
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0x0c1304d5ce8a9b4285b1f3cff04df841a85c885d77a3ff78e22657b237515311"
+  ],
+  "returns": {},
+  "timestamp": 1704223681,
+  "chain": 80001,
+  "multi": false,
+  "commit": "2b78680"
+}
