@@ -14,7 +14,7 @@ import {DecentralizedStableCoin} from "../../../src/DecentralizedStableCoin.sol"
 import {HelperConfig} from "../../../script/HelperConfig.s.sol";
 import {DeployDSC} from "../../../script/DeployDSC.s.sol";
 import {ERC20Mock} from "@openzeppelin/contracts/mocks/token/ERC20Mock.sol";
-import {StopOnRevertHandler} from "./StopOnRevertHandler.t.sol";
+import {StopOnRevertHandler} from "./Handler.t.sol";
 import {console} from "forge-std/console.sol";
 
 contract StopOnRevertInvariants is StdInvariant, Test {
