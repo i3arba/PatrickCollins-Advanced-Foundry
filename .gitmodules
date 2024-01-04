@@ -22,3 +22,6 @@
 [submodule "defi-protocol/lib/chainlink-brownie-contracts"]
 	path = defi-protocol/lib/chainlink-brownie-contracts
 	url = https://github.com/smartcontractkit/chainlink-brownie-contracts
+[submodule "upgradable-smart-contracts/lib/forge-std"]
+	path = upgradable-smart-contracts/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
