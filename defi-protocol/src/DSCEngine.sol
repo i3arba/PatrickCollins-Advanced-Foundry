@@ -295,6 +295,7 @@ contract DSCEngine is ReentrancyGuard {
     /////////////////////////////////////
     // Public & External View Functions
     /////////////////////////////////////
+    //OK--------------------------------------------
     function getTokenAmountFromUsd(address token, uint256 usdAmountInWei) public view returns(uint256){
         // price of Eth(token)
         AggregatorV3Interface priceFeed = AggregatorV3Interface(s_priceFeeds[token]);
@@ -302,6 +303,7 @@ contract DSCEngine is ReentrancyGuard {
         return (usdAmountInWei * PRECISION ) / (uint256(price) * ADDITIONAL_FEED_PRECISION);
     }
 
+    //OK--------------------------------------------
     function getAccountCollateralValue(address user) public view returns(uint256 totalCollateralValueInUsd){
         //loop through each collateral token, get the amount they have deposited
         for(uint256 i =0; i< s_collateralTokens.length; i++){
@@ -312,11 +314,28 @@ contract DSCEngine is ReentrancyGuard {
         return totalCollateralValueInUsd;
     }
 
+    //OK--------------------------------------------
     function getUsdValue(address token, uint256 amount) public view returns(uint256){
         AggregatorV3Interface priceFeed = AggregatorV3Interface(s_priceFeeds[token]);
         (, int256 price,,,) = priceFeed.latestRoundData();
         // 1 ETH = $1000
         //The returned value from CL will be 1000 * 1e8
         return ((uint256(price) * ADDITIONAL_FEED_PRECISION ) * amount) / PRECISION;
+    }
+
+    //OK--------------------------------------------
+    function getAccountInformation(address user) external view returns(uint256 totalDscMinted, uint256 collateralValueInUsd){
+        (totalDscMinted, collateralValueInUsd) = _getAccountInformation(user);
+    }
+
+    //OK--------------------------------------------
+    function getCollateralDeposited(address user) public returns(uint256 totalCollateralValueInUsd){
+        //loop through each collateral token, get the amount they have deposited
+        for(uint256 i =0; i< s_collateralTokens.length; i++){
+            address token = s_collateralTokens[i];
+            uint256 amount = s_collateralDeposited[user][token];
+            totalCollateralValueInUsd += amount;
+        }
+        return totalCollateralValueInUsd;
     }
 }
