@@ -28,3 +28,6 @@
 [submodule "daos/lib/forge-std"]
 	path = daos/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "daos/lib/openzeppelin-contracts"]
+	path = daos/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
